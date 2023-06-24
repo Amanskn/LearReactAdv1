@@ -3,7 +3,7 @@ import React from 'react';
 const ErrorExample = () => {
   let title="random title"
   const handleClick=(msg)=>{
-    // title=msg;
+    title="Aman";
     alert(msg)
     alert(title)
   }

@@ -1,22 +1,19 @@
 import React, { useState } from 'react';
-// useState - is a function 
-// Just a check
-// console.log("Outer most")
+
+// useState:-  it is a function
+
 const UseStateBasics = () => {
-// Just a check
-  // console.log("Aman Madd outer")
+  // Just a check to see whether useState is a function or not 
+  // console.log(typeof useState)
+
+  console.log(useState())
 return<>
-    <h2>useState basic example</h2>;
-    {/* Just a check */}
-    {/* {
-      console.log("Aman Madd")
-    } */}
+    <h2>useState basic example</h2>
+    
   </> 
 
-};
+}
 
 
-// Just a check
-// console.log("Aman Madd outerlast")
 
 export default UseStateBasics;
