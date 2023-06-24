@@ -10,7 +10,7 @@ const ErrorExample = () => {
     <h2>
       {title}
     </h2>
-    <button className='btn' onClick={()=>{handleClick("Passed msg")}}>Click me</button>
+    <button className='btn' onClick={function (){handleClick("Passed msg123")}}>Click me</button>
     </>
   )
 };
