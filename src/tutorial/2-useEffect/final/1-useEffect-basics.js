@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 // cleanup function
 // second parameter
 const UseEffectBasics = () => {
+  
   const [value, setValue] = useState(0);
   useEffect(() => {
     console.log('call useEffect');
