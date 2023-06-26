@@ -16,15 +16,17 @@ const UseStateBasics = () => {
 
 
   // Note :- hooks must be inside the React function component  body
+  // Note :- hooks can never be called conditionally, Please note that I am talking about hooks not the stateHandler function returned by hook, Hope you got it 
    let [text,setText] = useState("Random Text");
    
    // console.log(text)
    const handleClick=()=>{
      if(text==='Random Text')
-
+      // Error :- you cannot invoke hook inside normal function
       // var [text,setText] = useState("Random Text");
      setText("Aman")
      else
+     // Error :- you cannot invoke hook inside normal function
     //  var [text,setText] = useState("Random Text");
       setText("Random Text")
     console.log(text)
