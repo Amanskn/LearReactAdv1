@@ -11,9 +11,10 @@ const UseStateCounter = () => {
     setTimeout(()=>{
       // Just a check
       console.log("inside complex increase")
+      // Note:- with this way of changing the state value the state will get changed without taking into consideration the latest state value, Getting?
       // setValue(value+1);
 
-      // passing a function inside  set state function , Why??
+      // passing a function inside  state handler function , Why??
       // Ans:- to take into consideration the latest updated state value, Got it?
       setValue((previousValue)=>{
           return previousValue+1;
