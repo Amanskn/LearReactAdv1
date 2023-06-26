@@ -2,13 +2,34 @@ import React from 'react';
 import { data } from '../../../data';
 
 const UseStateArray = () => {
-  return <>{[
-  <h1 key={1}>1</h1>,
-  <h1 key={2}>2</h1>,
-  <h1 key={34}>3</h1>,
-  <h1>4</h1>,
-  <h1>5</h1>,
-  ]}</>;
+
+  let [people,setPeople]=React.useState(data);
+  const [btn,setBtn]=React.useState("remove");
+  
+  
+  const toogleContent=()=>{
+    if(btn=='remove'){
+      setBtn('fetch')
+      setPeople([])
+    }
+    else{
+      setBtn('remove');
+      setPeople(data)
+    }
+  }
+  return <>
+  {people.map((person)=>{
+    return (
+      <div className='item' key={person.id}>
+        <h3>{person.name}</h3>
+        <button>Remove</button>
+      </div>
+    )
+  })}
+  <h2>UseState Array example</h2>
+  <button className='btn' onClick={toogleContent}>{btn}</button>
+  </>;
 };
+
 
 export default UseStateArray;
