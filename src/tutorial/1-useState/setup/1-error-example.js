@@ -1,11 +1,12 @@
 import React from 'react';
 
+console.log("Hi")
 const ErrorExample = () => {
   let title="random title"
   const handleClick=(msg)=>{
     title="Aman";
     alert(msg)
-    alert(title)
+    alert("title="+title)
   }
   return (
     <>
