@@ -15,13 +15,17 @@ const UseStateBasics = () => {
   // const setText = useState("Random text")[1];
 
 
-   const [text,setText] = useState("Random Text");
+  // Note :- hooks must be inside the React function component  body
+   let [text,setText] = useState("Random Text");
+   
+   // console.log(text)
+   const handleClick=()=>{
+     if(text==='Random Text')
 
-  // console.log(text)
-  const handleClick=()=>{
-    if(text==='Random Text')
-      setText("Aman")
-    else
+      // var [text,setText] = useState("Random Text");
+     setText("Aman")
+     else
+    //  var [text,setText] = useState("Random Text");
       setText("Random Text")
     console.log(text)
   }
