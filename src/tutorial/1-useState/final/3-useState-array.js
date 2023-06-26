@@ -9,6 +9,7 @@ const UseStateArray = () => {
   };
   return (
     <>
+    
       {people.map((person) => {
         const { id, name } = person;
         return (
