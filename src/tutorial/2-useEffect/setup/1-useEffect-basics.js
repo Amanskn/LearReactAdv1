@@ -23,7 +23,10 @@ const UseEffectBasics = () => {
     // console.log(num,"This is the title :-",document.title,num,"Aman");
     // console.log("This is the title :-",document.title,num,"Aman");
     
-  })
+  },[value])
+  useEffect(()=>{
+    console.log("Second useEffect called")
+  },[])
   console.log("normal log after useEffect")
   const handleClick = ()=>{
 
