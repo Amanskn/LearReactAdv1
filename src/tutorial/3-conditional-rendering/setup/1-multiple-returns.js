@@ -1,7 +1,17 @@
 import React, { useState, useEffect } from 'react';
 const url = 'https://api.github.com/users/QuincyLarson';
+
+
+
 const MultipleReturns = () => {
-  return <h2>multiple returns</h2>;
+  const [loading,setLoading] = useState(true);
+  console.log("This is the loading value :-",loading)
+  if(loading)
+    return <>
+      <h2>Loading...</h2>
+      <button className='btn' onClick={()=>{setLoading(false)}}>load content</button>
+    </>;
+  return <h2>Loaded</h2>;
 };
 
 export default MultipleReturns;
