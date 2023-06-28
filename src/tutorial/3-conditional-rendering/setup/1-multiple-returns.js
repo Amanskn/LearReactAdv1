@@ -30,6 +30,7 @@ const MultipleReturns = () => {
       setUser(login);
       setIsLoading(false); 
     })
+    // -------------this catch block will only handle Network errors or the explicit errors thrown by us. As we are doing in case of 404 http status code inside then block
     .catch((err)=>{
       console.log("An Error came:-",err)
     })
