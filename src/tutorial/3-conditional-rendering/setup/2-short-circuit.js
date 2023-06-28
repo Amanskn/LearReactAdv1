@@ -15,6 +15,9 @@ const ShortCircuit = () => {
     <button className='btn' onClick={()=>{setIsError(!isError)}}>Toggle error</button>
     {isError && <h1>error...</h1> }
 
+    {/* example of ternary operator */}
+    {isError?<h1>Error... using ? :</h1>: <h1>No error... using ? :</h1> }
+
 
 
 
