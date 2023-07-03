@@ -16,6 +16,7 @@ const UseRefBasics = () => {
       inputContainer,
       "This is the value of inputContainer on submission"
     );
+    console.log(inputContainer.current.value);
     console.log(btnContainer.current);
     console.log(divContainer.current);
   };
