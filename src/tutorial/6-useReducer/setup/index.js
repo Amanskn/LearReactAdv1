@@ -15,7 +15,7 @@ const Index = () => {
         ...people,
         {
           id: new Date().getTime().toString(),
-          name: name,
+          name,
         },
       ]);
     } else {
@@ -31,18 +31,18 @@ const Index = () => {
             type="text"
             value={name}
             onChange={(e) => {
-              console.log(e.target.value);
+              // console.log(e.target.value);
               setName(e.target.value);
             }}
           />
         </div>
         <button>Add</button>
       </form>
-      <div className="item">
+      <div>
         {people.map((person) => {
           const { id, name } = person;
           return (
-            <div>
+            <div key={id} className="item">
               <h2>{name}</h2>
             </div>
           );
